@@ -20,8 +20,8 @@ unzip pytorch.zip -d ./pytorch && rm ./pytorch.zip && \
 cd ../ && mkdir weights 
 
 WORKDIR /simple-HRNet/weights 
-RUN curl -c ./cookie -s -L "https://drive.google.com/uc?export=download&id=1UoJhTtjHNByZSm96W3yFTfU5upJnsKiS" > /dev/null && \
-curl -Lb ./cookie "https://drive.google.com/uc?export=download&confirm=`awk '/download/ {print $NF}' ./cookie`&id=1UoJhTtjHNByZSm96W3yFTfU5upJnsKiS" -o pose_hrnet_w48_384x288.pth
+RUN curl -c ./cookie -s -L "https://drive.google.com/uc?export=download&id=1zYC7go9EV0XaSlSBjMaiyE_4TcHc_S38" > /dev/null && \
+curl -Lb ./cookie "https://drive.google.com/uc?export=download&confirm=`awk '/download/ {print $NF}' ./cookie`&id=1zYC7go9EV0XaSlSBjMaiyE_4TcHc_S38" -o pose_hrnet_w48_384x288.pth
 RUN git submodule update --init --recursive
 WORKDIR /simple-HRNet/models/detectors/yolo
 RUN pip3 install -r requirements.txt
